@@ -15,14 +15,12 @@ const validation = Yup.object().shape({
     .required("Required"),
 });
 
-const initialValues = {
-  name: "",
-  number: "",
-};
-
 const ContactForm = () => {
   const dispatch = useDispatch();
-
+  const initialValues = {
+    name: "",
+    number: "",
+  };
   const handleSubmit = (values, { resetForm }) => {
     const newContact = {
       id: Date.now(),
